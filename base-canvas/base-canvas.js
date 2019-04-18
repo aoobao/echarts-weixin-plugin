@@ -29,14 +29,10 @@ Component({
       }
     }
   },
-  created() {
-    // console.log('created')
-    idIndex++
-  },
-
   ready() {
     // console.log('ready')
     let self = this
+    idIndex++
     this.setData({
       id: BASE_ID + idIndex,
       ec: {
