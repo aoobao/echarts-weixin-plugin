@@ -19,6 +19,8 @@
 }
 ```
 
+这一配置的作用是，允许我们在 `pages/test/index.wxml` 中使用 `<base-canvas>` 组件。注意路径的相对位置要写对，如果目录结构和本例相同，就应该像上面这样配置。
+
 `index.wxss` 配置如下:
 ```xml
 .chart-container{
@@ -32,8 +34,6 @@ base-canvas{
 }
 ```
 
-这一配置的作用是，允许我们在 `pages/test/index.wxml` 中使用 `<base-canvas>` 组件。注意路径的相对位置要写对，如果目录结构和本例相同，就应该像上面这样配置。
-
 `index.wxml` 中，我们创建了一个 `<base-canvas>` 组件，内容如下：
 
 ```xml
@@ -41,8 +41,8 @@ base-canvas{
  <base-canvas option="{{ option }}"></base-canvas> 
 </view>
 ```
-> 注意事项:此处的 `.chart-container`，和`base-canvas` 必须要设置基础高度,具体请参考index.wxss.
-> 当option发生改变的时候,请将option整个替换.
+> 注意事项:此处的 `.chart-container`，和`base-canvas` 必须要设置基础宽高,具体请参考index.wxss.
+> 当option发生改变的时候,请将option整个替换(参考`test/index.js`写法).
 
 其中 `option` 是ECharts官方的配置项,这对于所有 ECharts 图表都是通用的，用户只需要修改上面 `option` 的内容，即可改变图表。`option` 的使用方法参见 [ECharts 配置项文档](http://echarts.baidu.com/option.html)。对于不熟悉 ECharts 的用户，可以参见 [5 分钟上手 ECharts](http://echarts.baidu.com/tutorial.html#5%20%E5%88%86%E9%92%9F%E4%B8%8A%E6%89%8B%20ECharts) 教程
 
