@@ -71,7 +71,7 @@ function initChart(canvas, width, height) {
   if (typeof this.data.option === 'object' && this.data.option !== null) {
     chart.setOption(this.data.option)
   }
-  console.log('triggerEvent createChart')
+  // console.log('triggerEvent createChart')
   this.triggerEvent('createChart', chart)
 
   return chart
