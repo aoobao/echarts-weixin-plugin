@@ -13,9 +13,15 @@ Page({
       option: option
     })
   },
+  deleteOption() {
+    this.setData({
+      option: null
+    })
+  },
   createChart(e) {
     // chart实例创建后会触发事件
     let chart = e.detail
+    // console.log('create')
     setTimeout(() => {
       // 模拟2秒后高亮指定的折线
       chart.dispatchAction({
@@ -23,6 +29,9 @@ Page({
         seriesIndex: 0
       })
     }, 2000);
+  },
+  disposeChart(){
+    console.log('图表已销毁')
   }
 })
 

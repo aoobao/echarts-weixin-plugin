@@ -25,7 +25,12 @@ Component({
   observers: {
     option(opt) {
       if (this.chart) {
-        this.chart.setOption(opt)
+        if (opt !== null) {
+          this.chart.setOption(opt)
+        } else {
+          // console.log(this)
+          this.disposeChart()
+        }
       }
     }
   },
@@ -41,11 +46,7 @@ Component({
     })
   },
   detached() {
-    // console.log('detached')
-    if (this.chart) {
-      this.chart.dispose()
-      this.chart = null
-    }
+    this.disposeChart()
   },
   /**
    * 组件的方法列表
@@ -53,8 +54,15 @@ Component({
   methods: {
     getChart() {
       return this.chart || null
+    },
+    disposeChart() {
+      if (this.chart) {
+        this.chart.dispose()
+        this.chart = null
+      }
+      this.triggerEvent('disposeChart')
     }
-    // 后面考虑输出 saveImage,touchStart 等
+    // 后面考虑输出 saveImage等
   }
 })
 
