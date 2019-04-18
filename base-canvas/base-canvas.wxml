@@ -1,0 +1,4 @@
+<!--base-canvas/base-canvas.wxml-->
+<view class="view-container" >
+  <ec-canvas wx:if="{{id !== null}}" id="{{id}}" canvas-id="{{id}}" ec="{{ ec }}"></ec-canvas>
+</view>

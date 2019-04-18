@@ -1,0 +1,6 @@
+<!--pages/test/index.wxml-->
+<view class="chart-container">
+  
+ <base-canvas option="{{ option }}"></base-canvas> 
+</view>
+<button type="default" bindtap="changeOption" >更新折线option</button>

@@ -1,0 +1,6 @@
+<!--index.wxml-->
+<button type="default" size="defaultSize" bindtap="clickHandle">更新图表</button>
+<button type="default" size="defaultSize" bindtap="clearHandle">清除</button>
+<view class="chart-container" wx:for="{{optList}}" wx:key="{{index}}">
+  <base-canvas option="{{item}}"></base-canvas>
+</view>
