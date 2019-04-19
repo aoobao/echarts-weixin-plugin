@@ -1,4 +1,4 @@
 <!--base-canvas/base-canvas.wxml-->
 <view class="view-container" >
-  <ec-canvas wx:if="{{id !== null && option !== null}}" id="{{id}}" canvas-id="{{id}}" ec="{{ ec }}"></ec-canvas>
+  <ec-canvas wx:if="{{id !== null && option !== null}}" id="{{id}}" canvas-id="{{'canvas_dom_' + id}}" ec="{{ ec }}"></ec-canvas>
 </view>
